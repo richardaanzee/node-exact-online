@@ -10,6 +10,26 @@ This module is a work in progress. Not all methods are available yet. Feel free 
 ```bash
 npm install exact-online
 ```
+# Usage 
+
+Create a client
+```javascript
+var exactOnline = require('exact-online');
+var client = exactOnline.createClient({
+	clientId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx', // OAuth Client ID
+  clientSecret: 'xxxxxxxxxxxx', // OAuth Client Secret
+  env: 'production', // Environment (production/development)
+  debug: false, // Enable debug logging
+  redirectUri: 'https://example.com/oauth/redirect'
+});
+```
+The client can be used to call methods on the Exact Online API
+```javascript
+// Get current user
+client.sys.me(function(userData) {
+  console.log(userData); 
+});
+```
 
 # Support
 Found a bug? Have a great idea? Feel free to create an issue or a pull request!
