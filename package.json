@@ -1,6 +1,6 @@
 {
   "name": "exact-online",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Wrapper for the Exact Online API",
   "main": "lib/exactonline.js",
   "scripts": {
